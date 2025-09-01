@@ -1,4 +1,4 @@
-import logo from "../assets/GloboLogo.png"
+import logo from "../assets/crocodiles.jpg"
 
 const Banner = () => {
     return (
@@ -6,7 +6,7 @@ const Banner = () => {
             <div>
                 <img src={logo} alt="logo" />
             </div>
-            <div>providing houses all over the world</div>
+            <div>Best not to do swimming</div>
         </header>
     );
 }
