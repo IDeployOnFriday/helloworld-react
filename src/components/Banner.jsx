@@ -6,7 +6,7 @@ const Banner = () => {
             <div>
                 <img src={logo} alt="logo" />
             </div>
-            <div>Best not to do swimming</div>
+            <div>Best not to go swimming</div>
         </header>
     );
 }
