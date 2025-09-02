@@ -40,7 +40,8 @@ const CrocList = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {crocodiles.map(c => <CrocodileRow key={c.id} croc ={c} />)}
+                            {crocodiles.map(c => <CrocodileRow key={c.id} 
+                            {...c} />)}
                         </tbody>
                     </table>
 

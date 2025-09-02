@@ -1,9 +1,9 @@
-const CrocodileRow = ({ croc }) => {
+const CrocodileRow = ({ id, name, habitat, status }) => {
     return (
-        <tr key={croc.id}>
-            <td>{croc.name}</td>
-            <td>{croc.habitat}</td>
-            <td>{croc.status}</td>
+        <tr key={id}>
+            <td>{name}</td>
+            <td>{habitat}</td>
+            <td>{status}</td>
         </tr>
     );
 }
