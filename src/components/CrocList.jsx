@@ -1,6 +1,7 @@
-import CrocodileRow from "./CrocodileRow";
+import { useState } from "react";
+import CrocRow from "./CrocRow";
 
-const crocodiles =[
+const crocArray =[
     {
         id: 1,  
         name: "American Crocodile",
@@ -24,6 +25,21 @@ const crocodiles =[
 
 
 const CrocList = () => {
+    // rerenders the ui 
+    const [crocs, setCrocs] = useState(crocArray);
+    
+    const addCrocs = () => {
+        setCrocs([
+            ...crocs, 
+            {
+            id: 6,
+            name: "New Crocodile",
+            habitat: "New Habitat",
+            status: "New Status"
+        },
+        ]);
+    };
+
     return (
         <>
             <div className="row mb-2">
@@ -40,10 +56,12 @@ const CrocList = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {crocodiles.map(c => <CrocodileRow key={c.id} 
-                            {...c} />)}
+                            {crocs.map(c => <CrocRow key={c.id} croc={c} />)}
                         </tbody>
                     </table>
+                    <button onClick={addCrocs} className="btn btn-primary">
+                        Add
+                    </button>
 
                 </div>
 
