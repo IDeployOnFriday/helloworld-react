@@ -3,7 +3,8 @@ import Banner from './components/Banner'
 function App() {
   return (
     <>
-      <Banner />
+      <Banner headerText="I wouldnt Swim There"/>
+      <Banner headerText="You might loose a toe"/>
     </>
   )
 }
