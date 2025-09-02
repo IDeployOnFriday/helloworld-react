@@ -1,3 +1,4 @@
+import CrocodileRow from "./CrocodileRow";
 
 const crocodiles =[
     {
@@ -39,13 +40,7 @@ const CrocList = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {crocodiles.map(croc => (
-                                <tr key={croc.id}>
-                                    <td>{croc.name}</td>
-                                    <td>{croc.habitat}</td>
-                                    <td>{croc.status}</td>
-                                </tr>
-                            ))}
+                            {crocodiles.map(c => <CrocodileRow key={c.id} croc ={c} />)}
                         </tbody>
                     </table>
 
