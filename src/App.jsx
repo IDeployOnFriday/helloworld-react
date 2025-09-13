@@ -1,16 +1,39 @@
-import Banner from './components/Banner'
-import "./App.css"
-import CrocList from './components/CrocList'
-import ShoppingCart from "./components/ShoppingCart.jsx";
+import StarRating from "./components/StarRating.jsx";
+
 
 function App() {
-  return (
-    <>
-      {/*<Banner><div>Welcome to the Jungle!</div></Banner>
-      <CrocList />*/}
-        <ShoppingCart></ShoppingCart>
-    </>
-  );
+    return (
+        <>
+            <section>
+                <h2>Winter's Orbit</h2>
+                <p>
+                    Rating: 5 / 5
+                </p>
+                <StarRating rating={5} />
+            </section>
+            <section>
+                <h2>Dial D for Deadman</h2>
+                <p>
+                    Rating: 4 / 5
+                </p>
+                <StarRating rating={4} />
+            </section>
+            <section>
+                <h2>Words And Things</h2>
+                <p>
+                    Rating: 0 / 5
+                </p>
+                <StarRating rating={0} />
+            </section>
+            <section>
+                <h2>The Galaxy, And The Ground Within</h2>
+                <p>
+                    Rating: 5 / 5
+                </p>
+                <StarRating rating={5} />
+            </section>
+        </>
+    );
 }
 
 export default App;

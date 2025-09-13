@@ -13,6 +13,7 @@ function StarRating({ rating }) {
     );
 }
 
+// range function to populate an array
 const range = (start, end, step = 1) => {
     let output = [];
 
