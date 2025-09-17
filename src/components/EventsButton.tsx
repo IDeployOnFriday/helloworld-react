@@ -1,13 +1,23 @@
 
 
 export function OnClickButton({items}) {
-    function handleClick(){
-        window.alert("the button was clicked")
+    function handleClick(type) {
+        if (type === 'win') {
+            alert('You win!');
+        } else {
+            alert('You lose :(');
+        }
     }
     return (
-        <button onClick={handleClick} className="btn btn-primary">
-        Click me for event
+        <>
+        <button onClick={() => handleClick('win')} className="btn btn-primary">
+        Click me for win
         </button>
+
+        <button onClick={() => handleClick('lose')} className="btn btn-primary">
+            Click And Lose
+        </button>
+        </>
     )
 }
 
