@@ -5,8 +5,9 @@ import {OnClickButton} from "./components/EventsButton.js";
 function App() {
     return (
         <>
-        <StarRadingsList/>
-        <OnClickButton/>
+        {/*<StarRadingsList/>*/}
+        <OnClickButton name={'win'}/>
+        <OnClickButton name={'lose'}/>
         </>
     );
 }

@@ -1,6 +1,6 @@
 
 
-export function OnClickButton({items}) {
+export function OnClickButton({name}) {
     function handleClick(type) {
         if (type === 'win') {
             alert('You win!');
@@ -9,15 +9,11 @@ export function OnClickButton({items}) {
         }
     }
     return (
-        <>
-        <button onClick={() => handleClick('win')} className="btn btn-primary">
-        Click me for win
+
+        <button onClick={() => handleClick(name)} className="btn btn-primary">
+        Click me for {name}
         </button>
 
-        <button onClick={() => handleClick('lose')} className="btn btn-primary">
-            Click And Lose
-        </button>
-        </>
     )
 }
 
