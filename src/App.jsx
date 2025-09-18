@@ -11,7 +11,6 @@ function App() {
         <OnClickButton name={'win'}/>
         <OnClickButton name={'lose'}/>
         <Counter/>
-            // use state asyncronous updates
         <Character/>
         </>
     );

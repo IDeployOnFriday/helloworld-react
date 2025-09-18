@@ -1,6 +1,8 @@
 import * as React from "react";
 
 
+// how to deal with asyncronous updates
+
 export function Character() {
     const [strength, setStrength] = React.useState(6);
     const [dexterity, setDexterity] = React.useState(9);
