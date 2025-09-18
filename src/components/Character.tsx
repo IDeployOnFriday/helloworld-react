@@ -9,11 +9,11 @@ export function Character() {
     const [intelligence, setIntelligence] = React.useState(15);
 
     function triggerLevelUp() {
-        let newStrength = strength + 1
+        const newStrength = strength + 1
         setStrength(newStrength);
-        let newDexterity = dexterity + 2
+        const newDexterity = dexterity + 2
         setDexterity(newDexterity);
-        let newIntelligence = intelligence + 3
+        const newIntelligence = intelligence + 3
         setIntelligence(newIntelligence);
 
         window.alert(`
