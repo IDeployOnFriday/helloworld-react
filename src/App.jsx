@@ -4,11 +4,13 @@ import {OnClickButton} from "./components/EventsButton.js";
 import Character from "./components/Character.js";
 import Counter from "./components/Counter.js";
 import {MyVerticallyCenteredModal} from "./components/myBanner.js";
+import {SearchForm} from "./components/state.js";
 
 
 function App() {
     return (
-        <MyVerticallyCenteredModal/>
+        <SearchForm/>
+
         // <>
         // {/*<StarRadingsList/>*/}
         // <OnClickButton name={'win'}/>
