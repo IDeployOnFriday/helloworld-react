@@ -19,6 +19,10 @@ export function SearchForm(){
                     }}
                     />
             </form>
+            <p>
+                search Term : {searchTerm}
+
+            </p>
         </>
     )
 }
