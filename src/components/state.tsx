@@ -21,8 +21,12 @@ export function SearchForm(){
             </form>
             <p>
                 search Term : {searchTerm}
-
             </p>
+            <button
+                onClick={() => setSearchTerm(Math.random().toString())}
+                >
+                click me
+            </button>
         </>
     )
 }
