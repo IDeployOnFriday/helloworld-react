@@ -5,11 +5,12 @@ import Character from "./components/Character.js";
 import Counter from "./components/Counter.js";
 import {MyVerticallyCenteredModal} from "./components/myBanner.js";
 import {SearchForm} from "./components/state.js";
+import {DropDownMenu} from "./components/DropdownMenu.jsx";
 
 
 function App() {
     return (
-        <SearchForm/>
+        <DropDownMenu/>
 
         // <>
         // {/*<StarRadingsList/>*/}
