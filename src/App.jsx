@@ -6,11 +6,12 @@ import Counter from "./components/Counter.js";
 import {MyVerticallyCenteredModal} from "./components/myBanner.js";
 import {SearchForm} from "./components/state.js";
 import {DropDownMenu} from "./components/DropdownMenu.jsx";
+import DropDownCountries from "./components/dropdownCountries.js";
 
 
 function App() {
     return (
-        <DropDownMenu/>
+        <DropDownCountries/>
 
         // <>
         // {/*<StarRadingsList/>*/}
