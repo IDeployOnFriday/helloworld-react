@@ -7,11 +7,17 @@ import {MyVerticallyCenteredModal} from "./components/myBanner.js";
 import {SearchForm} from "./components/state.js";
 import {DropDownMenu} from "./components/DropdownMenu.jsx";
 import DropDownCountries from "./components/dropdownCountries.js";
+import TwoFactor from "./components/TwoFactor.js";
+
 
 
 function App() {
     return (
-        <DropDownCountries/>
+        <>
+            <DropDownCountries/>
+            <TwoFactor/>
+        </>
+
 
         // <>
         // {/*<StarRadingsList/>*/}
