@@ -4,43 +4,43 @@ function ColorPicker() {
     const [colors, setColors] = React.useState([
         '#FFD500',
         '#FF0040',
+        '#FF0040',
+        '#FF0040',
+        '#FF0040',
     ]);
+    const [
+        numOfVisibleColors,
+        setNumOfVisibleColors,
+    ] = React.useState(2);
 
-    const colorStops = colors.join(', ');
-    const backgroundImage =
-        `linear-gradient(${colorStops})`;
+    const visibleColors = colors.slice(0, numOfVisibleColors);
+
+    const colorStops = visibleColors.join(', ');
+    const backgroundImage = `linear-gradient(${colorStops})`;
 
     function addColor() {
-        if (colors.length >= 5) {
-            window.alert('There is a maximum of 5 colors')
+        if (numOfVisibleColors >= 5) {
+            window.alert('There is a maximum of 5 colors');
             return;
         }
 
-        const nextColors = [...colors];
-        nextColors.push('#FF0000');
-        setColors(nextColors);
+        setNumOfVisibleColors(numOfVisibleColors + 1);
     }
 
     function removeColor() {
-        if (colors.length <= 2) {
-            window.alert('There is a minimum of 2 colors')
+        if (numOfVisibleColors <= 2) {
+            window.alert('There is a minimum of 2 colors');
             return;
         }
 
-        const nextColors = [...colors];
-        nextColors.pop();
-        setColors(nextColors);
+        setNumOfVisibleColors(numOfVisibleColors - 1);
     }
 
     return (
         <div className="wrapper">
             <div className="actions">
-                <button onClick={removeColor}>
-                    Remove color
-                </button>
-                <button onClick={addColor}>
-                    Add color
-                </button>
+                <button onClick={removeColor}>Remove color</button>
+                <button onClick={addColor}>Add color</button>
             </div>
 
             <div
@@ -51,13 +51,10 @@ function ColorPicker() {
             />
 
             <div className="colors">
-                {colors.map((color, index) => {
+                {visibleColors.map((color, index) => {
                     const colorId = `color-${index}`;
                     return (
-                        <div
-                            key={colorId}
-                            className="color-wrapper"
-                        >
+                        <div key={colorId} className="color-wrapper">
                             <label htmlFor={colorId}>
                                 Color {index + 1}:
                             </label>
@@ -79,8 +76,7 @@ function ColorPicker() {
                 })}
             </div>
         </div>
-
-    )
+    );
 }
 
 export default ColorPicker;
