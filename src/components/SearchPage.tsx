@@ -10,7 +10,7 @@ function SearchPage() {
         <>
             <header>
                 <a className="logo" href="/">
-                    Wanda’s Fruits
+                    Playing with moving state
                 </a>
                 <SearchForm
                     searchTerm={searchTerm}
