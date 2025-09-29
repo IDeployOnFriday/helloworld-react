@@ -1,36 +1,41 @@
 import React from 'react';
 
-function SearchForm() {
-  const [searchTerm, setSearchTerm] = React.useState('');
 
-  function runSearch(event: { preventDefault: () => void; }) {
-    event.preventDefault();
+type SearchFormProps = {
+    searchTerm: string
+    setSearchTerm : React.Dispatch<React.SetStateAction<string>>
+}
 
-    // Actual search stuff omitted from
-    // this example.
-  }
 
-  return (
-    <form onSubmit={runSearch}>
-      <label
-        className="visually-hidden"
-        htmlFor="search-input"
-      >
-        Search term:
-      </label>
-      <input
-        id="search-input"
-        className="search-input"
-        value={searchTerm}
-        onChange={event => {
-          setSearchTerm(event.target.value);
-        }}
-      />
-      <button>
-        Search
-      </button>
-    </form>
-  );
+function SearchForm({ searchTerm, setSearchTerm }: SearchFormProps) {
+    function runSearch(event: { preventDefault: () => void; }) {
+        event.preventDefault();
+
+        // Actual search stuff omitted from
+        // this example.
+    }
+
+    return (
+        <form onSubmit={runSearch}>
+            <label
+                className="visually-hidden"
+                htmlFor="search-input"
+            >
+                Search term:
+            </label>
+            <input
+                id="search-input"
+                className="search-input"
+                value={searchTerm}
+                onChange={event => {
+                    setSearchTerm(event.target.value);
+                }}
+            />
+            <button>
+                Search
+            </button>
+        </form>
+    );
 }
 
 export default SearchForm;
