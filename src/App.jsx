@@ -9,6 +9,7 @@ import {DropDownMenu} from "./components/DropdownMenu.jsx";
 import DropDownCountries from "./components/dropdownCountries.js";
 import TwoFactor from "./components/TwoFactor.js";
 import ColorPicker from "./components/ColorPicker.js";
+import SearchPage from "./components/SearchPage.js";
 
 
 
@@ -16,7 +17,7 @@ function App() {
     return (
         <>
 
-            <ColorPicker/>
+            <SearchPage/>
         </>
 
 
