@@ -1,7 +1,7 @@
-import React from 'react';
+import SearchForm from "./SearchForm.tsx";
+import SearchResults from "./SearchResults.tsx";
+import React from "react";
 
-import SearchForm from './SearchForm';
-import SearchResults from './SearchResults';
 
 function SearchPage() {
     const [searchTerm, setSearchTerm] = React.useState('');
