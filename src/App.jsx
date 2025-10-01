@@ -11,6 +11,7 @@ import TwoFactor from "./components/TwoFactor.js";
 import ColorPicker from "./components/ColorPicker.js";
 import SearchPage from "./components/SearchPage.js";
 import CoinCounter from "./components/CoinCounter.js";
+import {InputGuess} from "./components/GuessInput.js";
 
 
 
@@ -18,7 +19,7 @@ function App() {
     return (
         <>
 
-            <CoinCounter/>
+            <InputGuess/>
         </>
 
 
