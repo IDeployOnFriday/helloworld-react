@@ -6,7 +6,7 @@ function App() {
         setSearchTerm,
     ] = React.useState('');
 
-    const inputRef = React.useRef();
+    const inputRef = React.useRef<HTMLInputElement | null>(null);
 
     React.useEffect(() => {
         // Uncomment me!
