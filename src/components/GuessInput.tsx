@@ -1,14 +1,35 @@
-
+import React from "react";
 
 
 export function InputGuess() {
 
+    const [guess, setGuess] = React.useState('')
+
+    function handleSubmit(event: { preventDefault: () => void; }){
+        event.preventDefault();
+        console.log(guess)
+
+        if (guess.length !== 5){
+            window.alert('please enter exactly 2 characters');
+            return
+        }
+
+
+        setGuess('')
+    }
+
     return (
-    <form>
+    <form onSubmit={handleSubmit}>
         <label> Enter Guess :</label>
         <input
+            required
             minLength={5}
             maxLength={5}
+            value={guess}
+            onChange={(event) => {
+                const nextGuess = event.target.value.toUpperCase();
+                setGuess(nextGuess);
+            }}
             id="guess-inout"
             type={"text"}
         />
