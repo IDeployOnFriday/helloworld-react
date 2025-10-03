@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export function InputGuess() {
+function GuessInput() {
 
     const [guess, setGuess] = React.useState('')
 
@@ -37,3 +37,5 @@ export function InputGuess() {
     )
 
 }
+
+export default GuessInput;
