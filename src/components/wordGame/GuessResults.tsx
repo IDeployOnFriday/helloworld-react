@@ -10,7 +10,7 @@ function GuessResults(){
             {/*        {guess}*/}
             {/*    </p>*/}
             {/*))}*/}
-            <p>my guess</p>
+            <p>My Guess</p>
         </div>
 
     )

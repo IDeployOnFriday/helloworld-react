@@ -6,7 +6,7 @@ import GuessInput from "./GuessInput.tsx";
 
     return (
         <>
-            <h1>hello</h1>
+            <h1>My Game</h1>
             <GuessResults/>
             <GuessInput/>
         </>
