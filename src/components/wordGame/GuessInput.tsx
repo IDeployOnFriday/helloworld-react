@@ -1,9 +1,12 @@
-import React from "react";
+
+interface GuessInputProps {
+    guess: string,
+    setGuess: Function,
+}
+
+function GuessInput({guess, setGuess }: GuessInputProps) {
 
 
-function GuessInput() {
-
-    const [guess, setGuess] = React.useState('')
 
     function handleSubmit(event: { preventDefault: () => void; }){
         event.preventDefault();
