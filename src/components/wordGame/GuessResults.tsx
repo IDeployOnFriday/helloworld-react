@@ -1,12 +1,12 @@
 
 
 
-function GuessResults(){
+function GuessResults({guess}: {guess: string}){
 
     return(
         <div>
             <p>result 1</p>
-            <p>result 2</p>
+            <p>{guess}</p>
             {/*{guesses.map((guess, index) => (*/}
             {/*    <p key={index} >*/}
             {/*        {guess}*/}
