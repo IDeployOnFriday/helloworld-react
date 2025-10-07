@@ -13,12 +13,12 @@ function GuessInput({handelSubmitGuess }: GuessInputProps) {
         //console.log(guess)
 
         if (guess.length !== 5){
-            window.alert('please enter exactly 2 characters');
+            window.alert('please enter exactly 5 characters');
             return
         }
 
 
-        handelSubmitGuess('')
+        handelSubmitGuess(guess)
     }
 
     return (
