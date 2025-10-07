@@ -1,16 +1,16 @@
+import React from "react";
 
 interface GuessInputProps {
-    guess: string,
-    setGuess: Function,
+    handelSubmitGuess: Function,
 }
 
-function GuessInput({guess, setGuess }: GuessInputProps) {
+function GuessInput({handelSubmitGuess }: GuessInputProps) {
 
-
+    const [guess, setGuess] = React.useState('')
 
     function handleSubmit(event: { preventDefault: () => void; }){
         event.preventDefault();
-        console.log(guess)
+        //console.log(guess)
 
         if (guess.length !== 5){
             window.alert('please enter exactly 2 characters');
@@ -18,7 +18,7 @@ function GuessInput({guess, setGuess }: GuessInputProps) {
         }
 
 
-        setGuess('')
+        handelSubmitGuess('')
     }
 
     return (
