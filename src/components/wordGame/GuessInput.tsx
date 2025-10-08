@@ -6,19 +6,19 @@ interface GuessInputProps {
 
 function GuessInput({handelSubmitGuess }: GuessInputProps) {
 
-    const [guess, setGuess] = React.useState('')
+    const [tentativeGuess, setTentativeGuess] = React.useState('')
 
     function handleSubmit(event: { preventDefault: () => void; }){
         event.preventDefault();
-        //console.log(guess)
+        //console.log(tentativeGuess)
 
-        if (guess.length !== 5){
+        if (tentativeGuess.length !== 5){
             window.alert('please enter exactly 5 characters');
             return
         }
 
 
-        handelSubmitGuess(guess)
+        handelSubmitGuess(tentativeGuess)
     }
 
     return (
@@ -28,10 +28,10 @@ function GuessInput({handelSubmitGuess }: GuessInputProps) {
             required
             minLength={5}
             maxLength={5}
-            value={guess}
+            value={tentativeGuess}
             onChange={(event) => {
                 const nextGuess = event.target.value.toUpperCase();
-                setGuess(nextGuess);
+                setTentativeGuess(nextGuess);
             }}
             id="guess-inout"
             type={"text"}
