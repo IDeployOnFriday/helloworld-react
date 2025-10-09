@@ -19,6 +19,7 @@ function GuessInput({handelSubmitGuess }: GuessInputProps) {
 
 
         handelSubmitGuess(tentativeGuess)
+        setTentativeGuess('');
     }
 
     return (

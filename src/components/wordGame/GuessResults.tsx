@@ -5,14 +5,14 @@ function GuessResults({guesses}: {guesses: string[]}){
 
     return(
         <div>
-            {/*<p>result 1</p>*/}
-            {/*<p>{guesses.toString()}</p>*/}
+            <h3>My Guesses</h3>
+
             {guesses.map((guess, index) => (
                 <p key={index} >
                     {guess}
                 </p>
             ))}
-            <p>My Guess</p>
+
         </div>
 
     )
