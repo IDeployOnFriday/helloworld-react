@@ -4,11 +4,9 @@
 function GuessResults({guesses}: {guesses: string[]}){
 
     return(
-        <div>
-            <h3>My Guesses</h3>
-
+        <div className="guess-results">
             {guesses.map((guess, index) => (
-                <p key={index} >
+                <p key={index} className="guess">
                     {guess}
                 </p>
             ))}
