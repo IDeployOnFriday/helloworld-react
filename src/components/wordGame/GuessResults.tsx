@@ -1,4 +1,4 @@
-
+import Guess from "./Guess.tsx";
 
 
 function GuessResults({guesses}: {guesses: string[]}){
@@ -6,9 +6,9 @@ function GuessResults({guesses}: {guesses: string[]}){
     return(
         <div className="guess-results">
             {guesses.map((guess, index) => (
-                <p key={index} className="guess">
-                    {guess}
-                </p>
+                <Guess
+                    key={index}
+                    value={guess}/>
             ))}
 
         </div>
