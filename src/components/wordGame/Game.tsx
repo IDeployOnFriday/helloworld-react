@@ -15,7 +15,6 @@ import {useState} from "react";
 
     return (
         <>
-            <h1>My Game</h1>
             <GuessResults
                 guesses={guesses}
             />

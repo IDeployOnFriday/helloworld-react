@@ -1,13 +1,16 @@
 import Game from "./components/wordGame/Game.js";
+import Header from "./components/wordGame/Header.js";
 
 
 function App() {
     return (
-        <>
+        <div className="wrapper">
+            <Header />
 
-            <Game></Game>
-        </>
-
+            <div className="game-wrapper">
+                <Game />
+            </div>
+        </div>
     );
 }
 
