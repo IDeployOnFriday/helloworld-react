@@ -4,6 +4,8 @@ import Header from "./components/wordGame/Header.js";
 
 function App() {
     return (
+<>
+
         <div className="wrapper">
             <Header />
 
@@ -11,6 +13,7 @@ function App() {
                 <Game />
             </div>
         </div>
+</>
     );
 }
 
