@@ -1,10 +1,12 @@
 import GuessResults from "./GuessResults.tsx";
 import GuessInput from "./GuessInput.tsx";
 import {useState} from "react";
+import {sample} from "./utils.tsx";
+import {WORDS} from "./data.tsx";
+
+const answer = sample(WORDS)
 
     function Game(){
-
-
 
         const [guesses, setGuesses] = useState<string[]>([])
 
@@ -17,6 +19,7 @@ import {useState} from "react";
         <>
             <GuessResults
                 guesses={guesses}
+                answer ={answer}
             />
             <GuessInput
                 handelSubmitGuess={handleSubmitGuess}
