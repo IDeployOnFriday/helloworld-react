@@ -11,7 +11,7 @@ const answer = sample(WORDS)
         const [guesses, setGuesses] = useState<string[]>([])
 
         function handleSubmitGuess(guess: string) {
-            console.log("received guess")
+            console.log("answer is", answer)
             setGuesses(prevGuesses => [...prevGuesses, guess])
         }
 
