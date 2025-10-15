@@ -7,8 +7,10 @@ interface Props {
 }
 
 function Cell({ letter, status }: { letter?: string; status?: string }) {
+    const className = status ? `cell ${status}` : `cell`
+
     return (
-        <span className={`cell ${status ?? ''}`}>{letter ?? ''}</span>
+        <span className={className}>{letter ?? ''}</span>
     );
 }
 
