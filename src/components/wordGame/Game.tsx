@@ -34,6 +34,7 @@ const answer = sample(WORDS)
                 answer ={answer}
             />
             <GuessInput
+                gameStatus = {gameStatus}
                 handelSubmitGuess={handleSubmitGuess}
 
             />

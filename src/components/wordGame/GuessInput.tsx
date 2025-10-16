@@ -2,9 +2,10 @@ import React from "react";
 
 interface GuessInputProps {
     handelSubmitGuess: Function,
+    gameStatus : string
 }
 
-function GuessInput({handelSubmitGuess }: GuessInputProps) {
+function GuessInput({gameStatus, handelSubmitGuess }: GuessInputProps) {
 
     const [tentativeGuess, setTentativeGuess] = React.useState('')
 
@@ -26,6 +27,7 @@ function GuessInput({handelSubmitGuess }: GuessInputProps) {
     <form onSubmit={handleSubmit}>
         <label> Enter Guess :</label>
         <input
+            disabled={gameStatus !== 'running'}
             required
             minLength={5}
             maxLength={5}
