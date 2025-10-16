@@ -4,6 +4,8 @@ import {useState} from "react";
 import {sample} from "./utils.tsx";
 import {WORDS} from "./data.tsx";
 import {NUM_OF_GUESSES_ALLOWED} from "./constants.tsx";
+import WonBanner from "./WonBanner.tsx";
+import LostBanner from "./LostBanner.tsx";
 
 const answer = sample(WORDS)
 
@@ -38,6 +40,12 @@ const answer = sample(WORDS)
                 handelSubmitGuess={handleSubmitGuess}
 
             />
+            {gameStatus === 'won' && (
+                <WonBanner numberOfGuesses={guesses.length}/>
+            )}
+            {gameStatus === 'lost' && (
+                <LostBanner answer={answer}/>
+            )}
         </>
 
     )
