@@ -1,6 +1,6 @@
 import GuessResults from "./GuessResults.tsx";
 import GuessInput from "./GuessInput.tsx";
-import {useState} from "react";
+import React, {useState} from "react";
 import {sample} from "./utils.tsx";
 import {WORDS} from "./data.tsx";
 import {NUM_OF_GUESSES_ALLOWED} from "./constants.tsx";
@@ -8,9 +8,11 @@ import WonBanner from "./WonBanner.tsx";
 import LostBanner from "./LostBanner.tsx";
 import {ResetButton} from "./ResetButton.tsx";
 
-const answer = sample(WORDS)
+
 
     function Game(){
+
+        const [answer, setAnswer] = React.useState(() => sample(WORDS));
 
         const [gameStatus, setGameStatus] = useState('running')
         const [guesses, setGuesses] = useState<string[]>([])
@@ -28,6 +30,13 @@ const answer = sample(WORDS)
             }
         }
 
+        function handleRestart() {
+            const newAnswer = sample(WORDS);
+            setAnswer(newAnswer);
+            setGuesses([]);
+            setGameStatus('running');
+        }
+
     return (
         <>
             <GuessResults
@@ -37,9 +46,8 @@ const answer = sample(WORDS)
                 answer ={answer}
             />
             <GuessInput
-                gameStatus = {gameStatus}
-                handelSubmitGuess={handleSubmitGuess}
-
+                gameStatus={gameStatus}
+                handleSubmitGuess={handleSubmitGuess}
             />
             {gameStatus === 'won' && (
                 <WonBanner numberOfGuesses={guesses.length}/>
@@ -47,7 +55,7 @@ const answer = sample(WORDS)
             {gameStatus === 'lost' && (
                 <LostBanner answer={answer}/>
             )}
-            <ResetButton/>
+            <ResetButton handleRestart={handleRestart}/>
         </>
 
     )
