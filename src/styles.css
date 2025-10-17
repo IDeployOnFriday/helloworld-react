@@ -86,6 +86,23 @@ html {
 */
 body {
     font-family: sans-serif;
+    min-height: 100vh;
+    /* Wild animated gradient background */
+    background: linear-gradient(-45deg, #ff0066, #8338ec, #3a86ff, #00f5d4, #ffbe0b);
+    background-size: 400% 400%;
+    animation: wildGradient 24s ease infinite;
+}
+
+@keyframes wildGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
+    }
 }
 
 @media (max-height: 600px) {
