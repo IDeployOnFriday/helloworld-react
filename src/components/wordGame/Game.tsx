@@ -6,6 +6,7 @@ import {WORDS} from "./data.tsx";
 import {NUM_OF_GUESSES_ALLOWED} from "./constants.tsx";
 import WonBanner from "./WonBanner.tsx";
 import LostBanner from "./LostBanner.tsx";
+import {ResetButton} from "./ResetButton.tsx";
 
 const answer = sample(WORDS)
 
@@ -31,7 +32,7 @@ const answer = sample(WORDS)
         <>
             <GuessResults
 
-                gameStatus={gameStatus}
+
                 guesses={guesses}
                 answer ={answer}
             />
@@ -46,6 +47,7 @@ const answer = sample(WORDS)
             {gameStatus === 'lost' && (
                 <LostBanner answer={answer}/>
             )}
+            <ResetButton/>
         </>
 
     )
