@@ -1,5 +1,5 @@
 import Game from "./components/wordGame/Game.js";
-import Header from "./components/wordGame/Header.js";
+import Header from "./components/Header.tsx";
 
 
 function App() {
@@ -8,10 +8,6 @@ function App() {
 
         <div className="wrapper">
             <Header />
-
-            <div className="game-wrapper">
-                <Game />
-            </div>
         </div>
 </>
     );
