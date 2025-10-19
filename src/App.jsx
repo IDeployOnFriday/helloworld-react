@@ -1,4 +1,4 @@
-import Game from "./components/wordGame/Game.js";
+
 import Header from "./components/Header.tsx";
 
 
