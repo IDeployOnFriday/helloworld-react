@@ -1,14 +1,13 @@
 
 import Header from "./components/Header.tsx";
+import VideoApp from "./components/videoPlayer/VideoApp.js";
 
 
 function App() {
     return (
 <>
 
-        <div className="wrapper">
-            <Header />
-        </div>
+        <VideoApp></VideoApp>
 </>
     );
 }
