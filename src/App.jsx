@@ -1,6 +1,6 @@
 
 import Header from "./components/Header.tsx";
-import VideoApp from "./components/videoPlayer/VideoApp.js";
+import VideoApp from "./components/videoPlayer/VideoApp";
 
 
 function App() {
