@@ -3,7 +3,7 @@ import MediaPlayer from './MediaPlayer'
 
 const DEMO_SONG_SRC = 'https://storage.googleapis.com/joshwcomeau/bvrnout-take-it-easy-short.mp3';
 
-function App() {
+function MediaPlayerApp() {
     return (
         <>
             <MediaPlayer src={DEMO_SONG_SRC} />
@@ -11,4 +11,4 @@ function App() {
     );
 }
 
-export default App;
+export default MediaPlayerApp;
