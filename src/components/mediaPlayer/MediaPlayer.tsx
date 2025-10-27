@@ -1,10 +1,10 @@
 import VisuallyHidden from './VisuallyHidden';
-import { Play } from 'react-feather';
+import {Pause, Play} from 'react-feather';
 import React from "react";
 
 function MediaPlayer({ src }: { src: string }) {
     const audioRef = React.useRef<HTMLAudioElement | null>(null);
-
+    const [isPlaying, setIsPlaying] = React.useState(false)
     return (
     <div className="wrapper">
       <div className="media-player">
@@ -15,18 +15,29 @@ function MediaPlayer({ src }: { src: string }) {
         </div>
         <button
             onClick={() => {
-                console.log("audioRef.current", audioRef.current)
+
                 if  (audioRef.current) {
-                    console.log("start song ")
-                    audioRef.current.play();
+
+                    if (isPlaying) {
+                        audioRef.current.pause();
+                    } else {
+                        audioRef.current.play();
+                    }
+                    setIsPlaying(!isPlaying)
                 }
             }}
         >
-          <Play />
+            {isPlaying ? <Pause/> :<Play /> }
           <VisuallyHidden>Toggle playing</VisuallyHidden>
         </button>
 
-          <audio ref={audioRef} src={src} />
+          <audio
+              ref={audioRef}
+              src={src}
+              onEnded={() => {
+                  setIsPlaying(false);
+              }}
+          />
       </div>
     </div>
   );
