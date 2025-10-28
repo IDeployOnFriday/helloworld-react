@@ -88,7 +88,7 @@ body {
     font-family: sans-serif;
     min-height: 100vh;
     /* Wild animated gradient background */
-    background: linear-gradient(-45deg, #ff0066, #8338ec, #3a86ff, #00f5d4, #ffbe0b);
+    /*background: linear-gradient(-45deg, #ff0066, #8338ec, #3a86ff, #00f5d4, #ffbe0b);*/
     background-size: 400% 400%;
     animation: wildGradient 24s ease infinite;
 }
