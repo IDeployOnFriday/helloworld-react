@@ -1,6 +1,13 @@
-import React from "react";
+import * as React from "react";
+import * as ContextMenu from "@radix-ui/react-context-menu";
+import {
+    DotFilledIcon,
+    CheckIcon,
+    ChevronRightIcon,
+} from "@radix-ui/react-icons";
+import "../../styles.css";
 
-const ContextMenuDemo = () => {
+const DropdownMenu = () => {
     const [bookmarksChecked, setBookmarksChecked] = React.useState(true);
     const [urlsChecked, setUrlsChecked] = React.useState(false);
     const [person, setPerson] = React.useState("pedro");
@@ -13,8 +20,6 @@ const ContextMenuDemo = () => {
             <ContextMenu.Portal>
                 <ContextMenu.Content
                     className="ContextMenuContent"
-                    sideOffset={5}
-                    align="end"
                 >
                     <ContextMenu.Item className="ContextMenuItem">
                         Back <div className="RightSlot">⌘+[</div>
@@ -109,4 +114,4 @@ const ContextMenuDemo = () => {
     );
 };
 
-export default ContextMenuDemo;
+export default DropdownMenu;

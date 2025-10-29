@@ -1,18 +1,40 @@
-
 import Header from "./components/Header.tsx";
-import VideoApp from "./components/videoPlayer/VideoApp";
-import MediaPlayerApp from "./components/mediaPlayer/MediaPlayerApp.js";
-import UseEffectForm from "./components/useEffect/UseEffectForm.js";
-import SignupForm from "./components/useEffect/UseEffectForm.js";
-
+import React from "react";
+import {ContextMenu} from "radix-ui";
+import ContextMenuDemo from "./components/DropdownMenu.jsx";
 
 function App() {
-    return (
-<>
+    const [menuStatus, setMenuStatus] = React.useState(false);
 
-        <SignupForm></SignupForm>
-</>
+    return (
+        <>
+            <span
+                data-state="closed"
+                className="styles_Trigger__nxHkP"
+                style={{
+                    WebkitTouchCallout: "none",
+                    display: "block",
+                    border: "2px dashed #333",
+                    color: "#333",
+                    backgroundColor: "#f0f0f0",
+                    borderRadius: 4,
+                    fontSize: 15,
+                    userSelect: "none",
+                    padding: "45px 0",
+                    width: 300,
+                    textAlign: "center",
+                    cursor: "pointer",
+                }}
+                onClick={() => {
+                    setMenuStatus(true);
+                }}
+            >
+                Right-click here.
+            </span>
+            {menuStatus && <ContextMenuDemo />}
+        </>
     );
 }
 
 export default App;
+
