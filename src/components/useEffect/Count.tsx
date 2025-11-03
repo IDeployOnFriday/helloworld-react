@@ -10,7 +10,7 @@ function App() {
 
     React.useEffect(() => {
         // Uncomment me!
-        inputRef.current.focus();
+        inputRef.current?.focus();
     }, []);
 
     return (
