@@ -9,6 +9,19 @@ function WindowSize() {
         height: window.innerHeight,
     });
 
+    React.useEffect(() => {
+        function handleResize() {
+            setWindowDimensions({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        }
+
+        window.addEventListener('resize', handleResize);
+    }, []);
+
+
+
 
     return (
         <div className="wrapper">
