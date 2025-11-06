@@ -17,7 +17,9 @@ function pureJsVersion() {
         }
     });
 
-    observer.observe(wrapperElement);
+    if (wrapperElement) {
+        observer.observe(wrapperElement);
+    }
 }
 
 function Toasty() {

@@ -1,8 +1,7 @@
-import React from 'react';
 
-import Toasty from './Toasty';
+import Toasty from './Toasty.tsx';
 
-function App() {
+function ToastyApp() {
     return (
         <main>
             <article>
@@ -52,4 +51,4 @@ function App() {
     );
 }
 
-export default App;
+export default ToastyApp;
