@@ -1,32 +1,36 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import styles from './Toasty.module.css';
 
-// Here's how we'd solve this problem using vanilla JS.
-// Feel free to repurpose this in your solution!
-function pureJsVersion() {
-    const wrapperElement = document.querySelector('.toasty-wrapper');
-
-    const observer = new IntersectionObserver((entries) => {
-        const [entry] = entries;
-
-        if (entry.isIntersecting) {
-            // Show character
-        } else {
-            // Hide character
-        }
-    });
-
-    if (wrapperElement) {
-        observer.observe(wrapperElement);
-    }
-}
 
 function Toasty() {
     // Your goal is to update the `isShown` state variable,
     // based on the user's scroll position, using
     // IntersectionObserver.
     const [isShown, setIsShown] = React.useState(false);
+    const wrapperRef = React.useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+
+        const observer = new IntersectionObserver((entries) => {
+            const [entry] = entries;
+
+            console.log(entry.isIntersecting)
+
+            if (entry.isIntersecting) {
+                // Show character
+            } else {
+                // Hide character
+            }
+        });
+
+        if (wrapperRef.current != null){
+            observer.observe(wrapperRef.current);
+        }
+
+
+
+    }, []);
 
     // This CSS value will control whether the ghost is
     // visible or not.
