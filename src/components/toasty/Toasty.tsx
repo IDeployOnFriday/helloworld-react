@@ -1,6 +1,7 @@
-import React, {useEffect} from 'react';
+
 
 import styles from './Toasty.module.css';
+import React from "react";
 
 
 function Toasty() {
@@ -10,18 +11,13 @@ function Toasty() {
     const [isShown, setIsShown] = React.useState(false);
     const wrapperRef = React.useRef<HTMLDivElement>(null)
 
-    useEffect(() => {
+    React.useEffect(() => {
 
         const observer = new IntersectionObserver((entries) => {
             const [entry] = entries;
 
-            console.log(entry.isIntersecting)
+            setIsShown(entry.isIntersecting)
 
-            if (entry.isIntersecting) {
-                // Show character
-            } else {
-                // Hide character
-            }
         });
 
         if (wrapperRef.current != null){
@@ -39,7 +35,7 @@ function Toasty() {
         : '100%';
 
     return (
-        <div className={styles.wrapper}>
+        <div ref={wrapperRef} className={styles.wrapper}>
             <div
                 className={styles.character}
                 style={{
