@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Clock from './Clock'
+import Clock from './Clock.tsx'
 
 function App() {
     const [showClock, setShowClock] = React.useState(true);
