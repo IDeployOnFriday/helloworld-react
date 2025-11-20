@@ -6,6 +6,7 @@ import {
     ChevronRightIcon,
 } from "@radix-ui/react-icons";
 import "../../styles.css";
+import {FooMenuItem} from "./FooMenuItem.tsx";
 
 const DropdownMenu = () => {
     const [bookmarksChecked, setBookmarksChecked] = React.useState(true);
@@ -21,6 +22,7 @@ const DropdownMenu = () => {
                 <ContextMenu.Content
                     className="ContextMenuContent"
                 >
+                    <FooMenuItem title={"my list"} />
                     <ContextMenu.Item className="ContextMenuItem">
                         Back <div className="RightSlot">⌘+[</div>
                     </ContextMenu.Item>
