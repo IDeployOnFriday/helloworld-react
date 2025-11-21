@@ -2,6 +2,7 @@ import React from "react";
 import VideoApp from "./components/videoPlayer/VideoApp.js";
 import Header from "./components/Header.js";
 import DropdownMenu from "./components/dropdownMenu/DropdownMenu";
+import ToastyApp from "./components/toasty/ToastyApp.js";
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
             <div className="wrapper" style={{backgroundColor: 'lightblue', padding: '20px'}}>
 
 
-            <DropdownMenu></DropdownMenu>
+            <ToastyApp></ToastyApp>
             </div>
         </>
 
