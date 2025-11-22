@@ -58,31 +58,11 @@ function ToastyApp() {
 
                 {expanded && <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Menu</h3>}
                 {expanded  &&
-                <ul
-                    style={{
-                        listStyle: 'none',
-                        padding: 0,
-                        margin: 0,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '12px',
-                        alignItems: 'stretch',
-                        width: '100%',
-                    }}
-                >
-                    <li>
+                    <>
                         <MyMenuButton>Add A</MyMenuButton>
-                    </li>
-                    <li>
                         <MyMenuButton>Add B</MyMenuButton>
-                    </li>
-                    <li>
                         <MyMenuButton>Add C</MyMenuButton>
-                    </li>
-                    <li>
-                        <MyMenuButton>Add D</MyMenuButton>
-                    </li>
-                </ul>
+                        <MyMenuButton>Add D</MyMenuButton></>
                 }
             </nav>
 
