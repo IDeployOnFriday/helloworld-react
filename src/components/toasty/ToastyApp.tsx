@@ -1,6 +1,7 @@
 
 import Toasty from './Toasty.tsx';
 import { useState } from 'react';
+import styled from "styled-components";
 
 function ToastyApp() {
     const [expanded, setExpanded] = useState(true);
@@ -56,6 +57,7 @@ function ToastyApp() {
                 </button>
 
                 {expanded && <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Menu</h3>}
+                {expanded  &&
                 <ul
                     style={{
                         listStyle: 'none',
@@ -69,18 +71,19 @@ function ToastyApp() {
                     }}
                 >
                     <li>
-                        <button style={{ width: '100%' }} title="Add A">{expanded ? 'Add A' : 'A'}</button>
+                        <MyMenuButton>Add A</MyMenuButton>
                     </li>
                     <li>
-                        <button style={{ width: '100%' }} title="Add b">{expanded ? 'Add b' : 'b'}</button>
+                        <MyMenuButton>Add B</MyMenuButton>
                     </li>
                     <li>
-                        <button style={{ width: '100%' }} title="Add C">{expanded ? 'Add C' : 'C'}</button>
+                        <MyMenuButton>Add C</MyMenuButton>
                     </li>
                     <li>
-                        <button style={{ width: '100%' }} title="Add D">{expanded ? 'Add D' : 'D'}</button>
+                        <MyMenuButton>Add D</MyMenuButton>
                     </li>
                 </ul>
+                }
             </nav>
 
             <main style={mainStyle}>
@@ -205,5 +208,16 @@ function ToastyApp() {
         </>
     );
 }
+
+
+const MyMenuButton = styled.button`
+    border: medium solid darkblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin-bottom: 5px;
+`
 
 export default ToastyApp;
