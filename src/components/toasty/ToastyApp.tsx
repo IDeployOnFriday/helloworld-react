@@ -56,9 +56,9 @@ function ToastyApp() {
                     {expanded ? '«' : '»'}
                 </button>
 
-                {expanded && <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Menu</h3>}
-                {expanded  &&
+                {expanded &&
                     <>
+                    <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Menu</h3>
                         <MyMenuButton>Add A</MyMenuButton>
                         <MyMenuButton>Add B</MyMenuButton>
                         <MyMenuButton>Add C</MyMenuButton>
