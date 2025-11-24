@@ -45,15 +45,15 @@ function ToastyApp() {
                         position: 'absolute',
                         top: '8px',
                         right: '8px',
-                        width: '20px',
+                        width: '15px',
                         height: '20px',
                         borderRadius: '6px',
                         border: '1px solid #ccc',
-                        background: '#fff',
+                        background: 'lightBlue',
 
                     }}
                 >
-                    {expanded ? '«' : '»'}
+                    {expanded ? '<' : '>'}
                 </button>
 
                 {expanded &&
