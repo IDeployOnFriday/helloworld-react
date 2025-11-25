@@ -1,5 +1,6 @@
+import {SetStateAction, useState} from "react";
 
-export function OrderingPage(){
+export function OrderingPage() {
 
 
     const items = [
@@ -25,16 +26,32 @@ export function OrderingPage(){
 }
 
 
-export function OrderIt(items: any[]) {
+export function OrderIt(itemss: any[]) {
 
+    const [items, setItems] = useState(itemss)
 
+    function moveUp(item: any, index: number) {
+        if (index === 0) return; // Can't move up if already at the top
 
-    function moveUp(item: any, index: number){
+        const newPosition = index - 1;
 
-        console.log({item})
+        const newItems = [...items];
+        newItems.splice(index, 1);
+        newItems.splice(newPosition, 0, item);
 
-        console.log('new position of this ' , index-1)
+        setItems(newItems);
+    }
 
+    function moveDown(item: any, index: number) {
+        if (index === items.length - 1) return; // Can't move down if already at the Bottom
+
+        const newPosition = index + 1;
+
+        const newItems = [...items];
+        newItems.splice(index, 1);
+        newItems.splice(newPosition, 0, item);
+
+        setItems(newItems);
     }
 
 
@@ -86,7 +103,7 @@ export function OrderIt(items: any[]) {
                                     marginLeft: '10px'
 
                                 }}
-                                onClick={() => console.log('move down')}
+                                onClick={() => moveDown(item, index)}
                                 aria-label="Move item down"
                                 title="Move down"
                             >
