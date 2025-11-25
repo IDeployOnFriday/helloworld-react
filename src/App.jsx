@@ -10,7 +10,7 @@ function App() {
 
     return (
         <>
-            <div className="wrapper" style={{backgroundColor: 'lightblue', padding: '20px'}}>
+            <div className="wrapper" style={{backgroundColor: '#e1f6fd', padding: '20px'}}>
 
 
             <OrderingPage></OrderingPage>
