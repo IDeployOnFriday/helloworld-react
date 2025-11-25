@@ -1,6 +1,6 @@
 
+export function OrderingPage(){
 
-export function OrderingPage() {
 
     const items = [
         {
@@ -20,55 +20,29 @@ export function OrderingPage() {
         }
     ];
 
+    return OrderIt(items)
+
+}
+
+
+export function OrderIt(items: any[]) {
+
+
+
+    function moveUp(item: any, index: number){
+
+        console.log({item})
+
+        console.log('new position of this ' , index-1)
+
+    }
+
+
+
     return (
         <div style={{ padding: '16px' }}>
-            <div
-                style={{
-                    display: 'flex',
-                    gap: '12px',
-                    justifyContent: 'center',
-                    marginBottom: '16px',
-                }}
-            >
-                <button
-                    style={{
-                        backgroundColor: '#8da4ef',
-                        color: '#111',
-                        padding: '10px 14px',
-                        border: '1px solid #d1d5db',
-                        borderRadius: '8px',
-                        cursor: 'pointer',
-                        fontWeight: 600,
-                        boxShadow: '0 1px 2px rgba(0,0,0,0.06)',
-                        transition: 'transform 120ms ease, box-shadow 120ms ease',
-                    }}
-                    onClick={() => console.log('move up')}
-                    aria-label="Move item up"
-                    title="Move up"
-                >
-                    Move up ↑
-                </button>
-                <button
-                    style={{
-                        backgroundColor: '#8da4ef',
-                        color: '#111',
-                        padding: '10px 14px',
-                        border: '1px solid #d1d5db',
-                        borderRadius: '8px',
-                        cursor: 'pointer',
-                        fontWeight: 600,
-                        boxShadow: '0 1px 2px rgba(0,0,0,0.06)',
-                        transition: 'transform 120ms ease, box-shadow 120ms ease',
-                    }}
-                    onClick={() => console.log('move down')}
-                    aria-label="Move item down"
-                    title="Move down"
-                >
-                    Move down ↓
-                </button>
-            </div>
 
-            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex',  gap: '8px', flexWrap: 'wrap' }}>
                 {items.map((item, index) => (
                     <div
                         key={index}
@@ -84,9 +58,40 @@ export function OrderingPage() {
                         }}
                     >
                         <div style={{ fontWeight: 600 }}>{item.title}</div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px' }}>
+                        <div style={{ display: 'flex'}}>
                             <span>Type: {item.type}</span>
                             <span>Orientation: {item.orientation}</span>
+                        </div>
+                        <div>
+                            <button
+                                style={{
+                                    backgroundColor: '#8da4ef',
+                                    color: '#111',
+                                    width: '25px',
+                                    height: '25px',
+
+                                }}
+                                onClick={() => moveUp(item, index)}
+                                aria-label="Move item up"
+                                title="Move up"
+                            >
+                                ↑
+                            </button>
+                            <button
+                                style={{
+                                    backgroundColor: '#8da4ef',
+                                    color: '#111',
+                                    width: '25px',
+                                    height: '25px',
+                                    marginLeft: '10px'
+
+                                }}
+                                onClick={() => console.log('move down')}
+                                aria-label="Move item down"
+                                title="Move down"
+                            >
+                                ↓
+                            </button>
                         </div>
                     </div>
                 ))}
